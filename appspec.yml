@@ -1,14 +1,7 @@
 version: 0.0
 os: linux
-files:
-  - source: /
-    destination: /home/ubuntu/EC2-Deploy-Test
-permissions:
-  - object: /home/ubuntu/EC2-Deploy-Test
-    owner: ubuntu
-    group: ubuntu
 hooks:
-  AfterInstall:
+  ApplicationStart:
     - location: deploy.sh
-      timeout: 1200
-      runas: root
+      timeout: 300
+      runas: ubuntu
