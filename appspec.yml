@@ -1,4 +1,4 @@
-version: 0.0 
+version: 0.0
 os: linux
 files:
   - source: /
@@ -9,7 +9,7 @@ permissions:
     group: ubuntu
 hooks:
   ApplicationStop:
-    - location: deploy.sh
+    - location: scripts/stop_application.sh
       timeout: 300
       runas: root
   AfterInstall:
