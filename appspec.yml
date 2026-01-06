@@ -8,10 +8,6 @@ permissions:
     owner: ubuntu
     group: ubuntu
 hooks:
-  ApplicationStop:
-    - location: scripts/stop_application.sh
-      timeout: 300
-      runas: root
   AfterInstall:
     - location: deploy.sh
       timeout: 1200
