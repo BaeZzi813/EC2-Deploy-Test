@@ -21,7 +21,7 @@ pm2 stop next_app 2>/dev/null || true
 pm2 delete next_app 2>/dev/null || true
 
 # 의존성 설치
-npm install
+npm ci --production
 
 # 빌드
 npm run build
