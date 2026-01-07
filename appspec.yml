@@ -4,6 +4,7 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/EC2-Deploy-Test
+    overwrite: true 
 
 hooks:
   ApplicationStop:
