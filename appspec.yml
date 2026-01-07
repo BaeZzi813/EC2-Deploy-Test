@@ -1,14 +1,22 @@
 version: 0.0
 os: linux
+
 files:
   - source: /
     destination: /home/ubuntu/EC2-Deploy-Test
+
 hooks:
   ApplicationStop:
-    - location: deploy.sh
+    - location: scripts/stop.sh
+      timeout: 60
+      runas: ubuntu
+
+  AfterInstall:
+    - location: scripts/build.sh
       timeout: 300
       runas: ubuntu
+
   ApplicationStart:
-    - location: deploy.sh
-      timeout: 300
+    - location: scripts/start.sh
+      timeout: 60
       runas: ubuntu
