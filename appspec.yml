@@ -1,5 +1,8 @@
 version: 0.0
 os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/EC2-Deploy-Test
 hooks:
   ApplicationStop:
     - location: deploy.sh
