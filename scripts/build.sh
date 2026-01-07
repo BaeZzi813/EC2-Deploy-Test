@@ -7,11 +7,11 @@ echo "=== move to app dir ==="
 cd $APP_DIR
 
 echo "=== node version ==="
-node -v || true
-npm -v || true
+node -v
+npm -v
 
 echo "=== install dependencies ==="
-npm install
+npm ci
 
-echo "=== build start ==="
+echo "=== build ==="
 npm run build
