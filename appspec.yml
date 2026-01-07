@@ -1,6 +1,10 @@
 version: 0.0
 os: linux
 hooks:
+  ApplicationStop:
+    - location: deploy.sh
+      timeout: 300
+      runas: ubuntu
   ApplicationStart:
     - location: deploy.sh
       timeout: 300
