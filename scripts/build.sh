@@ -10,8 +10,11 @@ echo "=== node version ==="
 node -v
 npm -v
 
+echo "=== clean node_modules ==="
+rm -rf node_modules
+
 echo "=== install dependencies ==="
-npm ci
+npm ci --no-progress
 
 echo "=== build ==="
 npm run build
