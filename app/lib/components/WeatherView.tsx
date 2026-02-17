@@ -115,7 +115,7 @@ export default function WeatherView() {
       setWeatherInfo(null);
       setWindChill(null);
     }
-  }, [selectedTime, cachedItems]);
+  }, [selectedTime, cachedItems, selectedDayOffset]);
 
   useEffect(() => setMounted(true), []);
 
