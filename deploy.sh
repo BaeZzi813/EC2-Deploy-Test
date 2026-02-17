@@ -16,5 +16,6 @@ git reset --hard origin/$BRANCH
 
 npm install
 npm run build
+npm cache clean --force
 pm2 describe next_app > /dev/null 2>&1 && pm2 restart next_app || pm2 start npm --name "next_app" -- start
 pm2 save
