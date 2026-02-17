@@ -8,8 +8,12 @@ BRANCH=main
 
 if [ ! -d "$DEPLOY_DIR/.git" ]; then
     git clone -b $BRANCH $REPO_URL $DEPLOY_DIR
-else
-    cd $DEPLOY_DIR
-    git fetch --all
-    git reset --hard origin/$BRANCH
 fi
+
+cd $DEPLOY_DIR
+git fetch --all
+git reset --hard origin/$BRANCH
+
+npm install
+npm run build
+pm2 restart next_app
